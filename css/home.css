@@ -133,7 +133,8 @@ Start Home Section
 .products ul li p,
 .authority ul li {
 	position: relative;
-	display: flex;
+	display: grid;
+    grid-template-columns: auto 1fr;
 	gap: 10px;
 	margin-top: 15px;
 }
@@ -285,22 +286,48 @@ Start Home Section
 
 /* End products  */
 /* Start testimonal  */
-.testimonals .box {
+.testimonals {
     background: white;
+}
+.testimonals .box {
+    background: #eee;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
     .testimonals .box  {
-        font: 14px;
+        font-size: 14px;
     }
 }
 /* end testimonal  */
 /* Start more-details Section  */
 .more-details {
-    background: white;
+    background: #eee;
+}
+.testimonals .quote {
+    position: relative;
+    flex: 1;
+}
+.testimonals .quote::before {
+    position: absolute;
+    content: '‘';
+    font-size: 30px;
+    color: blue;
+    top: -25px;
+    right: -6px;
+}
+.testimonals .quote::after {
+    position: absolute;
+    content: '’';
+    color: blue;
+    bottom: -21px;
+    font-size: 30px;
+    left: -4px;
 }
 /* End more-details Section  */
 /* Start footer  */
@@ -311,10 +338,10 @@ footer {
 footer .copy {
     color: white;
 }
-svg {
+ svg {
 	width: 100%;
 	fill: #C4C4CF ;
-    background: white;
+    background: #eee;
     text-align: center;
 }
 footer .logo {
@@ -323,6 +350,7 @@ footer .logo {
 }
 /* End footer  */
 /* Start components  */
+.sub-title ,
 .title {
     width: fit-content;
     margin: auto;
@@ -333,6 +361,7 @@ footer .logo {
     position: relative;
     color: #259762;
 }
+.sub-title::before,
 .title::before {
     content: "";
     position: absolute;
@@ -345,9 +374,23 @@ footer .logo {
 
 }
 .sub-title {
-    color: red;
+    font-size: small;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 p {
     color: #050000ad;
+}
+.cta-red {
+    margin: 15px auto;
+    min-width: 60px;
+    background: red;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
 }
 /* End components  */
