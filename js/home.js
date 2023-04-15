@@ -1,40 +1,31 @@
 
 
-  // ===========================================
+// Get the modal
+var modal = document.getElementById("openImgModal");
 
-  window.onload = function() {
-    let myElement = document.body;
-    console.log(myElement)
-    let mySparticles = new Sparticles(myElement, {
+// Get Img IN Modal
+var modalImg = document.getElementById("openImgModal__img");
+// Get Caption IN Modal
+var captionText = document.getElementById("openImgModalCaption");
 
-      "composition":"source-over",
-      "count":30,
-      "speed":5,
-      "parallax":1,
-      "direction":180,
-      "xVariance":2,
-      "yVariance":2,
-      "rotate":true,
-      "rotation":1,
-      "alphaSpeed":10,
-      "alphaVariance":1,
-      "minAlpha":0,
-      "maxAlpha":1,
-      "minSize":1,
-      "maxSize":10,
-      "style":"fill",
-      "bounce":false,
-      "drift":1,
-      "glow":0,
-      "twinkle":false,
-      "color":["random"],
-      "shape":"circle",
-      "imageUrl":""
-    
-    
-      }, 400);
-  }
+// Get All Imgs 
+let testimonialsImg = document.querySelectorAll('.img-to-open-js');
+testimonialsImg.forEach(function(img) {
+    img.addEventListener('click', function () {
+        modal.classList.add("flex-js");
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        console.log(img);
+    })
+})
 
 
-  //==================================================
+// Get the <span> element that closes the modal
+var span = document.querySelector(".openImgModalCloseBtn");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
   
+	modal.classList.remove("flex-js");
+}
+
