@@ -15,6 +15,10 @@ ul li {
 a {
     text-decoration: none;
 }
+ul {
+    padding: 0;
+    margin: 0;
+}
 section {
 	overflow: hidden;
 }
@@ -124,24 +128,44 @@ Start Home Section
 /* Start authority  */
 .authority ul {
 	text-align: right;
+    counter-reset: authority;
 }
+.products ul li p,
 .authority ul li {
 	position: relative;
 	display: flex;
 	gap: 10px;
 	margin-top: 15px;
 }
+.products ul li p,
 .authority ul li p {
 	position: relative;
 }
+.products ul li p::before,
 .authority ul li::before {
-	counter-increment: authority;
-	content: counter(authority);
-	display: block;
+    counter-increment: authority;
+    content: counter(authority);
+    background: yellowgreen;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
 }
 /* End   authority  */
 /* Start products  */
+.products ul  {
+    counter-reset: products-details;
+}
 .products ul li {
+    
+    list-style: none;
+    background: white;
+    padding: 5px;
+    border-radius: 23px;
 }
 .products ul li p::before {
     counter-increment: products-details;
@@ -274,15 +298,24 @@ Start Home Section
     }
 }
 /* end testimonal  */
+/* Start more-details Section  */
+.more-details {
+    background: white;
+}
+/* End more-details Section  */
 /* Start footer  */
 footer {
     background-color: #C4C4CF;
+    color: white;
+}
+footer .copy {
+    color: white;
 }
 svg {
 	width: 100%;
 	fill: #C4C4CF ;
-    background: transparent;
-	text-align: center;
+    background: white;
+    text-align: center;
 }
 footer .logo {
 	width: 200px;
