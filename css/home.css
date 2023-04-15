@@ -55,6 +55,7 @@ section {
 /* End Helper  */
 :root {
     --primary-color: #F29FBF;
+    --second-color: #115480;
 }
 body {
     line-height: 1.9;
@@ -98,7 +99,7 @@ Start Home Section
 	font-weight: 700;
 }
 .home .home__sub-title {
-    color: red;
+    color: var(--second-color);
 }
 .home .home__logo img {
     display: inline-block;
@@ -259,6 +260,20 @@ Start Home Section
 }
 
 /* End products  */
+/* Start testimonal  */
+.testimonals .box {
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+@media (max-width: 576px) {
+    .testimonals .box  {
+        font: 14px;
+    }
+}
+/* end testimonal  */
 /* Start footer  */
 footer {
     background-color: #C4C4CF;
@@ -280,9 +295,26 @@ footer .logo {
     margin: auto;
     padding-bottom: 10px;
     text-align: center;
-    border-bottom: 3px solid white ;
+    border-bottom: 2px solid #259762 ;
+    margin-bottom: 15px;
+    position: relative;
+    color: #259762;
+}
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 6px;
+    background: #259762;
+
 }
 .sub-title {
     color: red;
+}
+p {
+    color: #050000ad;
 }
 /* End components  */
