@@ -21,7 +21,7 @@ testimonialsImg.forEach(function(img) {
 
 
 // Get the <span> element that closes the modal
-var span = document.querySelector(".openImgModalCloseBtn");
+var span = document.querySelector("#openImgModalCloseBtn");
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
