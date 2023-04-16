@@ -304,15 +304,6 @@ Start Home Section
         font-size: 14px;
     }
 }
-/* end testimonal  */
-/* Start more-details Section  */
-.more-details {
-    background: #eee;
-}
-.more-details .box {
-    border: 2px dashed #ddd;
-    padding: 5px;
-}
 .testimonals .quote {
     position: relative;
     flex: 1;
@@ -333,6 +324,16 @@ Start Home Section
     font-size: 30px;
     left: -4px;
 }
+/* end testimonal  */
+/* Start more-details Section  */
+.more-details {
+    background: #eee;
+}
+.more-details .box {
+    border: 2px dashed #ddd;
+    padding: 5px;
+}
+
 /* End more-details Section  */
 /* Start footer  */
 footer {
